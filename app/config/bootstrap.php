@@ -32,6 +32,13 @@
 require __DIR__ . '/bootstrap/libraries.php';
 
 /**
+ * The Orchestra Bootstrap file contains the code for running a Lithium application on the
+ * Orchestra.io PHP Platform. See http://orchestra.io for more information.
+ *
+ */
+require __DIR__ . '/bootstrap/orchestra.php';
+
+/**
  * The error configuration allows you to use the filter system along with the advanced matching
  * rules of the `ErrorHandler` class to provide a high level of control over managing exceptions in
  * your application, with no impact on framework or application code.
