@@ -9,7 +9,7 @@ use lithium\core\Libraries;
 
 Libraries::add('app', array('default'=> true, 'resources' => call_user_func(function() {
 	if (!is_dir($resources = str_replace("//", "/", sys_get_temp_dir() . '/resources'))) {
-		foreach (array($resources, "{$resources}/logs", "{$resources}/tmp/cache/templates") as $d) {
+		foreach (array($resources, "{$resources}/tmp/logs", "{$resources}/tmp/cache/templates") as $d) {
 			mkdir($d, 0777, true);
 		}
 	}
