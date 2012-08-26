@@ -14,7 +14,14 @@
  */
 use lithium\storage\Session;
 
-$name = basename(LITHIUM_APP_PATH);
+/**
+ * 'PHPSESSID' session key required for sticky sessions to work in Orchestra.io's elastic load
+ * balancer.
+ *
+ * For more info on sticky sessions, see:
+ * @see http://shlomoswidler.com/2010/04/elastic-load-balancing-with-sticky-sessions.html
+ */
+$name = 'PHPSESSID';
 Session::config(array(
 	// 'cookie' => array('adapter' => 'Cookie', 'name' => $name),
 	'default' => array('adapter' => 'Php', 'session.name' => $name)
